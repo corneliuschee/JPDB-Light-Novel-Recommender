@@ -1,0 +1,11 @@
+.env
+.dotenv
+*.db
+*.xlsx
+*.csv
+.venv
+__pycache__/
+jpdb_functions.py
+webscrape.py
+run_update_script.py
+*.pbix
