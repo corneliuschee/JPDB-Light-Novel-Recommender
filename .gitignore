@@ -7,5 +7,5 @@
 __pycache__/
 jpdb_functions.py
 webscrape.py
-run_update_script.py
+run_update_script.bat
 *.pbix
