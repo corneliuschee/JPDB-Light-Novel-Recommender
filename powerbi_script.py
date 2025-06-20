@@ -4,7 +4,7 @@ import sqlite3
 import os
 
 #Connection to db
-conn = sqlite3.connect('C:/Users/Admin/OneDrive/Documents/Coding Projects/JPDB Project/jpdb_project.db')
+conn = sqlite3.connect('#####')
 
 
 def load_all_tables(conn):
