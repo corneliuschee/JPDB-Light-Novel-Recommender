@@ -4,7 +4,7 @@
 
 # 📚 Project Overview
 
-The **JPDB Light Novel Recommender System** is a simple command-line personalised Japanese reading tool that recommends *light novels optimized for your current vocabulary level*. By combining your **Anki flashcard vocabulary** with **[JPDB](https://jpdb.io) vocabulary frequency information**, 
+The **JPDB Light Novel Recommender System** is a simple command-line personalised Japanese reading tool that recommends *light novels optimized for your current vocabulary level*. By combining your **[Anki](https://apps.ankiweb.net/) flashcard vocabulary** with **[JPDB](https://jpdb.io) vocabulary frequency information**, 
 it identifies novels that are suitable at your current vocabulary coverage and retention.
 
 The system uses **Non-negative Matrix Factorization (NMF)** to generate personalized rankings for each novel based on:
