@@ -75,7 +75,7 @@ This project helped to visualise my Anki vocabulary statistics through PowerBI, 
 
 ### Challenges
 - JPDB API documentation did not cover some API endpoints required for the project (eg. get vocabulary frequency rank), worked around by reverse-engineering parts of the API workflow by inspecting network traffic and testing undocumented endpoints.
-- **API rate limits** required batching and delays when pulling vocab data, as web scraping was not officially allowed on the JPDB.io website.
+- **API rate limits** required batching and delays when pulling vocab data, as web scraping is [not officially allowed](https://jpdb.io/terms-of-use) on the JPDB.io website.
 - Ensuring the **recommender scores were meaningful** with limited vocabulary data (3.8k flashcards at time of completion) and light novel data (1475 novels only).
 - To keep the project manageable at my current level of knowledge, I limited the number of features used in the recommender model, dropping several (e.g., ‘Unique Kanji (used once)’, ‘Unique Words’) to avoid unnecessary complexity.”
 
