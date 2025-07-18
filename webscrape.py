@@ -1,3 +1,14 @@
+"""
+DISCLAIMER:
+This script is intended for personal educational use only.
+
+It scrapes publicly available data from jpdb.io, with delays to avoid burdening the server.
+JPDB.io's Terms of Service specifically PROHIBITS webscraping.
+The author assumes no liability for misuse of this script.
+
+Author: corneliuschee
+"""
+
 import time, random
 import pandas as pd
 import re, os, requests
