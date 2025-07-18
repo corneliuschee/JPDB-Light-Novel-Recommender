@@ -1,10 +1,10 @@
-#https://docs.ankiweb.net/stats.html
+#Anki statistics reference: https://docs.ankiweb.net/stats.html
 import os
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from jpdb_functions import *
 from sqlalchemy.exc import IntegrityError
-from sqlalchemy import create_engine, MetaData, select, insert, update, Table, text
+from sqlalchemy import create_engine, MetaData, Table, text
 
 STARTID = int((datetime.now().replace(hour=4, minute=0, second=0, microsecond=0) - timedelta(days=1)).timestamp() * 1000) #Last day 4am 
 CRT = datetime.fromtimestamp(1716235200, tz=timezone(offset=timedelta(hours=8), name='sgt')) #1716235200 is unix for creation of anki collection, got from querying the collection.anki2 db with 'SELECT crt FROM col'
@@ -114,63 +114,3 @@ if permission == 'granted':
             except IntegrityError:
                 continue
         
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# core_cards_ids = [card[1] for card in core_previous_day_reviewed_cards]  
-#     core_id_counts = Counter(core_cards_ids)
-#     repeated_core_ids = [id for id, count in core_id_counts.items() if count > 1]
-#     core_cards_button_pressed = [card[3] for card in core_previous_day_reviewed_cards] #takes values from 1 - 4, 1 = 'Again', 2 = 'Hard', 3 = 'Good', 4 = 'Easy'
-
-
-#     mining_cards_ids = [card[1] for card in mining_previous_day_reviewed_cards if card[0] not in core_cards_ids] #there are some duplicates in mining this ensures no double-counting
-#     mining_cards_button_pressed = [card[3] for card in mining_previous_day_reviewed_cards] #Same values as core_cards_button_pressed
-#     mining_id_counts = Counter(mining_cards_ids)
-#     repeated_mining_ids = [id for id, count, in mining_id_counts.items() if count > 1]
-    
-#     core_cards = anki_invoke('cardsInfo', cards = core_cards_ids)
-#     mining_cards = anki_invoke('cardsInfo', cards = mining_cards_ids)
-#     print(core_cards)
-    
-#     #Iterate over core cards first; Since all cards in core are known, we do not need to check for new vocab.
-#     core_update_value_dict = {} #to iterate through to update each vid using sqlalchemy
-#     all_core_vocab_reviews = anki_invoke('getReviewsOfCards', cards = core_cards_ids)
-#     for index, core_card in enumerate(core_cards):
-#         card_id = core_card['cardId']
-#         card_data = core_card['fields']
-#         vocab = card_data['Word']['value']
-#         #reading = card_data['Reading']['value']
-#         button_pressed = core_cards_button_pressed[index]
-
-#         if button_pressed < 2:
-#             continue
-
-#         vocab_data = lookup_vocab_vidless(vocab)
-#         vid = vocab_data['vid']
-        
-#         vocab_update_dict = {
-#             vid: {
-                
-#             }
-#         }
